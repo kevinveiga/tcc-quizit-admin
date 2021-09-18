@@ -1,0 +1,114 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": ["airbnb-base", "plugin:prettier/recommended", "prettier"],
+    "globals": {
+        "fetch": true,
+        "importScripts": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": ["prettier"],
+    "root": true,
+    "rules": {
+        "arrow-body-style": "off",
+        "babel/object-curly-spacing": "off",
+        "block-scoped-var": "warn",
+        "camelcase": "warn",
+        "comma-dangle": "off",
+        "curly": "warn",
+        "dot-notation": "off",
+        "eqeqeq": "off",
+        "global-require": "off",
+        "import/extensions": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/prefer-default-export": "off",
+        "indent": [
+            "off",
+            4,
+            {
+                "CallExpression": { "arguments": 1 },
+                "flatTernaryExpressions": false,
+                "FunctionDeclaration": { "body": 1, "parameters": 1 },
+                "FunctionExpression": { "body": 1, "parameters": 1 },
+                "MemberExpression": 1,
+                "SwitchCase": 1
+            }
+        ],
+        "new-cap": "off",
+        "no-alert": "off",
+        "no-bitwise": "off",
+        "no-caller": "warn",
+        "no-console": "off",
+        "no-debugger": "error",
+        "no-empty": "warn",
+        "no-eq-null": "off",
+        "no-extra-semi": "warn",
+        "no-invalid-regexp": "error",
+        "no-multiple-empty-lines": [
+            "warn",
+            {
+                "max": 1
+            }
+        ],
+        "no-nested-ternary": "off",
+        "no-new": "warn",
+        "no-obj-calls": "error",
+        "no-shadow": "off",
+        "no-tabs": ["warn", { "allowIndentationTabs": true }],
+        "no-undef": "warn",
+        "no-underscore-dangle": [
+            "error",
+            {
+                "allow": ["__REDUX_DEVTOOLS_EXTENSION__"]
+            }
+        ],
+        "no-unreachable": "error",
+        "no-unused-expressions": [
+            "error",
+            {
+                "allowTaggedTemplates": true
+            }
+        ],
+        "no-unused-vars": "off",
+        "no-use-before-define": "off",
+        "object-shorthand": "off",
+        "prettier/prettier": [
+            "warn",
+            {
+                "arrowParens": "always",
+                "bracketSpacing": true,
+                "endOfLine": "lf",
+                "jsxBracketSameLine": false,
+                "jsxSingleQuote": false,
+                "printWidth": 150,
+                "proseWrap": "preserve",
+                "requirePragma": false,
+                "semi": true,
+                "singleQuote": true,
+                "tabWidth": 4,
+                "trailingComma": "none",
+                "useTabs": false
+            }
+        ],
+        "quotes": [
+            "warn",
+            "single",
+            {
+                "allowTemplateLiterals": true
+            }
+        ],
+        "semi": "error",
+        "strict": "error"
+    }
+}
