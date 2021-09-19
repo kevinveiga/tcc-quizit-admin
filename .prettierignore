@@ -38,6 +38,7 @@ _notes
 # Npm & Yarn
 .npm
 .yarn-integrity
+last-package.json
 npm-debug.log*
 package-lock.json
 yarn-debug.log*
