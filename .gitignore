@@ -17,6 +17,9 @@
 .env*
 !.env.example
 
+# Firebase
+tcc-quizit-firebase-adminsdk.json
+
 # Generated
 /build
 
