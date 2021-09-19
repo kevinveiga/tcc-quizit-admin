@@ -10,23 +10,23 @@ admin.initializeApp({
 });
 
 async function grantAdminRole(email) {
-    // const user = await admin.auth().getUserByEmail(email);
-
-    // if (user.customClaims && user.customClaims.admin === true) {
-    //     return null;
-    // }
-
     try {
-        await admin.auth().setCustomUserClaims('SRWLsnmSPfNdEyGjPeFal6av4t42', {
-            admin: true
-        });
+        const user = await admin.auth().getUserByEmail(email);
 
-        console.log('grantAdminRole');
+        if (user.customClaims && user.customClaims.admin === true) {
+            console.log('Usuário já tem o papel de Admin');
+        } else {
+            await admin.auth().setCustomUserClaims(user.uid, {
+                admin: true
+            });
+
+            console.log('Papel de Admin adicionado para o usuário');
+        }
     } catch (err) {
         console.log('err: ', err);
     }
 }
 
-grantAdminRole();
+grantAdminRole('admin@admin.com');
 
 console.log('end');
